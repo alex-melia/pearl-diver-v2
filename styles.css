@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bitter", serif;
+}
+
+body {
+  display: block;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+#heading {
+  font-size: 64px;
+}
+
+#subheading {
+  font-size: 32px;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -3444px 0;
+  }
+}
+
+#gameCanvas {
+  position: absolute;
+  border: 1px solid black;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  animation: animatedBackground 8s linear infinite;
+}
+
+#game-stats {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  display: none;
+}
+
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  background-color: rgb(211, 221, 220);
+  padding: 18px;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -300px;
+}
+
+#pause-screen {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  background-color: rgb(211, 221, 220);
+  padding: 18px;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -300px;
+}
+
+#death-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 12px;
+  background-color: red;
+  width: 600px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -300px;
+}
+
+.death-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.stats {
+  position: absolute;
+  top: 1;
+  left: 50%;
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.stats-headings {
+  gap: 12px;
+}
+
+button {
+  max-width: 200px;
+  font-size: 32px;
+  text-align: center;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(136, 216, 209);
+  transform: scaleY(100px);
+  cursor: pointer;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+}

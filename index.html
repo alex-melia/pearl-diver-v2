@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pearl Diver</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="start-screen" class="menu">
+      <h1>Pearl Diver</h1>
+      <button onclick="startGame()">Start Game</button>
+      <h2><a>How to play</a></span>
+    </div>
+    <div id="pause-screen" class="menu">
+      <h1 id="heading">Game Paused</h1>
+      <button onclick="resumeGame()">Resume</button>
+    </div>
+    <div id="game-stats" class="stats">
+      <div class="flex stats-headings stats-card">
+        <h2 onclick="pauseGame()">Pause</h2>
+        <span class="flex">
+          <h2>Lives: &ThinSpace;</h2>
+          <h2 id="lives"></h2>
+        </span>
+        <span class="flex">
+          <h2>Score: &ThinSpace;</h2>
+          <h2 id="game-score" class="score"></h2>
+        </span>
+      </div>
+    </div>
+    <div id="death-screen" class="menu">
+      <div class="death-card">
+        <span id="heading">You died!</span>
+        <span class="flex" id="subheading">
+          Score: &ThinSpace;
+          <p class="score" id="death-score"></p>
+        </span>
+        <span class="flex" id="subheading">
+          High Score: &ThinSpace;
+          <p class="score" id="death-highscore"></p>
+        </span>
+        <button onclick="restartGame()">Play Again</button>
+      </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script type="module" src="/scripts/game.js" defer></script>
+    <script type="module" src="/scripts/diver.js" defer></script>
+  </body>
+</html>
